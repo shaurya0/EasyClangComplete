@@ -10,6 +10,7 @@
 	// set the standard library flag.
 	"std_flag" : "-std=c++11",
 
+	"flags" : [],
 	// search for .clang_complete file up the tree. Use includes from it if found
 	"search_clang_complete_file": true,
 

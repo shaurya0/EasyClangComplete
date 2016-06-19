@@ -48,6 +48,7 @@ class Settings:
     include_dirs = None
     clang_binary = None
     std_flag = None
+    flags = None
     search_clang_complete = None
     errors_on_save = None
     use_libclang = None
@@ -84,6 +85,7 @@ class Settings:
         self.clang_binary = self.subl_settings.get("clang_binary")
         self.errors_on_save = self.subl_settings.get("errors_on_save")
         self.std_flag = self.subl_settings.get("std_flag")
+        self.flags = self.subl_settings.get("flags")
         self.use_libclang = self.subl_settings.get("use_libclang")
         self.search_clang_complete = self.subl_settings.get(
             "search_clang_complete_file")

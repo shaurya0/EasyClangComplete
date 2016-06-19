@@ -197,10 +197,11 @@ class Completer(BaseCompleter):
             log.critical(" no flags for completion! Your setup is wrong!")
             return
 
-        complete_cmd = "{binary} {init} {std} {complete_at} {includes}".format(
+        complete_cmd = "{binary} {init} {std} {flags} {complete_at} {includes}".format(
             binary=Completer.clang_binary,
             init=" ".join(Completer.init_flags),
             std=self.std_flag,
+            flags=" ".join(self.flags),
             complete_at=complete_at_str,
             includes=" ".join(self.flags_dict[view.buffer_id()]))
         log.debug(" clang command: \n%s", complete_cmd)
